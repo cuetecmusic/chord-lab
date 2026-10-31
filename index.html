@@ -1268,7 +1268,11 @@ function hclApply(data){
 
 window.hclDownloadSession=function hclDownloadSession(){
   const json=JSON.stringify(hclCapture(),null,2);
-  const filename='chord-lab-session-'+new Date().toISOString().slice(0,10)+'.json';
+  let filename='chord-lab-session-'+new Date().toISOString().slice(0,10)+'.json';
+const chosen=window.prompt('Name your Chord Lab preset:',filename.replace(/\.json$/i,''));
+if(chosen===null)return;
+const clean=chosen.trim().replace(/[\\/:*?"<>|]/g,'-').replace(/\.json$/i,'');
+if(clean)filename=clean+'.json';
   const status=$('sessionstatus');
   // Android WebView cannot reliably download a Blob through a synthetic anchor.
   // Use the native Storage Access Framework bridge when running inside our APK.
