@@ -1,4 +1,4 @@
-const CACHE = 'chord-lab-web-2.3';
+const CACHE = 'chord-lab-web-2.4';
 const CORE = ['./', './index.html', './manifest.webmanifest'];
 self.addEventListener('install', event => {
   event.waitUntil(caches.open(CACHE).then(cache => cache.addAll(CORE)));
