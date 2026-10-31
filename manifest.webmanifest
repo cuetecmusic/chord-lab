@@ -1,0 +1,11 @@
+{
+  "name": "Chord Lab by Cuetec",
+  "short_name": "Chord Lab",
+  "description": "A browser-based chord instrument and groovebox by Cuetec.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#101f2b",
+  "theme_color": "#101f2b"
+}
